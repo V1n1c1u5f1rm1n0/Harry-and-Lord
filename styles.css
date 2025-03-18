@@ -7,14 +7,12 @@
 
 /*fontes importadas*/
 @font-face {
-  font-family: 'harryph' ;
+  font-family: 'harryph';
   src: url("./fontes/HARRYP__.TTF");
 }
 
-
 /*cores project*/
 :root {
-
   --cor-de-fundo: #000000;
   --cor-de-fonte: #ffffff;
   --cor-sonserina-1: #0C9305;
@@ -30,8 +28,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
   background-color: var(--cor-de-fundo);
-  color:var(--cor-de-fonte);   
-  
+  color: var(--cor-de-fonte);
 }
 
 .menu {
@@ -39,35 +36,9 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid var(--cor-Lufalufa-1);
   margin-top: 10px;
-  
 }
 
 /* Estilização do Menu Hambúrguer */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.hamburger div {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  transition: 0.4s;
-}
-
-/* Animação do "X" com 3s */
-.hamburger.open div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-  transition: transform 2s ease-in-out;
-}
-
-.hamburger.open div:nth-child(2) {
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-}/* Estilização do Menu Hambúrguer */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -101,110 +72,116 @@ body {
 
 .menu_nav {
   display: flex;
-  
 }
 
 .icons img {
-  width: 40px; 
+  width: 40px;
   height: 40px;
   margin-top: 24px;
   padding-left: 24px;
   margin-bottom: 24px;
 }
+
 .icons img:hover {
   filter: hue-rotate(220deg) brightness(0.3);
   transform: scale(1.1);
 }
+
 .icons img:active {
   filter: hue-rotate(220deg) brightness(0.3);
   transform: scale(0.95);
 }
+
 .logo {
-  font-family:'harryph';
+  font-family: 'harryph';
   font-weight: 100;
   font-size: 3.75rem; /* 60px */
   text-align: center;
-  flex-grow: 1;   
+  flex-grow: 1;
   margin-top: 10px;
   margin-left: 4%;
 }
 
 .prc {
-  display: flex; 
+  display: flex;
   width: 100%;
-  justify-content: space-between; 
-  align-items: flex-start; 
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
-  font-family:'harryph';
+  font-family: 'harryph';
   font-size: 1.75rem; /* 28px */
   gap: 5%;
-  
 }
-  .harry_potter, .lord_voldemort {
-  flex: 1; 
-  }
-  
-  .img_centro {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    max-width: 25%;
-    margin: 2%;
-    align-items: center;
-  }
 
-  .patrono {
+.harry_potter,
+.lord_voldemort {
+  flex: 1;
+}
+
+.img_centro {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 25%;
+  margin: 2%;
+  align-items: center;
+}
+
+.patrono {
   width: 50%;
   margin-right: 2%;
   margin-bottom: -20%;
-  filter: blur(100px); 
-  transition: opacity 5s ease, transform 5s ease, filter 5s ease; 
-  }
-  
-  .patrono:hover {
+  filter: blur(100px);
+  transition: opacity 5s ease, transform 5s ease, filter 5s ease;
+}
+
+.patrono:hover {
   opacity: 1;
   filter: blur(0);
-  }
-  
-  .nomes_lords {
+}
+
+.nomes_lords {
   margin-bottom: 5%;
   font-size: 3rem; /* 48px */
   font-weight: 100;
   margin-top: 4%;
-  }
-  
-  #Harry {
+}
+
+#Harry {
   margin-left: 5%;
   color: var(--cor-grifinoria-1);
-  }
-  
-  #Lord {
+}
+
+#Lord {
   color: var(--cor-sonserina-1);
   margin-right: 5%;
-  }
-  
-  .lord_voldemort {
-  text-align: right;
-  }
-  .harry_potter_texto, .lord_voldemort_texto {
-  margin-bottom: 20px;
-  }
-  .harry_potter_texto {
-  margin-left: 10%;
+}
 
-  }
-  .lord_voldemort_texto {
+.lord_voldemort {
+  text-align: right;
+}
+
+.harry_potter_texto,
+.lord_voldemort_texto {
+  margin-bottom: 20px;
+}
+
+.harry_potter_texto {
+  margin-left: 10%;
+}
+
+.lord_voldemort_texto {
   margin-right: 10%;
-  }
+}
 
 .menu_nav {
   display: flex;
   align-items: center;
-  
 }
+
 .menu_link {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
   font-size: 1rem; /* 16px */
   font-weight: bold;
   margin-right: 35px;
@@ -213,19 +190,20 @@ body {
   font-weight: 100;
   padding-right: -33px;
 }
+
 /* Hover de menu */
 #varinha:hover {
   color: var(--cor-grifinoria-1);
-
 }
+
 #feitico:hover {
   color: var(--cor-sonserina-2);
-
 }
+
 #magia:hover {
   color: var(--cor-magia-1);
-
 }
+
 .footer_icons {
   display: none;
 }
@@ -233,74 +211,76 @@ body {
 /* Animação do Menu */
 @keyframes slideIn {
   from {
-      opacity: 0;
-      transform: translateX(100%);
+    opacity: 0;
+    transform: translateX(100%);
   }
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes slideOut {
   from {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
   to {
-      opacity: 0;
-      transform: translateX(100%);
+    opacity: 0;
+    transform: translateX(100%);
   }
 }
 
-
 @media (max-width: 1270px) {
-  .menu{
+  .menu {
     align-items: center;
   }
+
   .prc {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
+
   .lord_voldemort {
     text-align: left;
     margin-left: 5%;
     margin-right: -5%;
   }
+
   .harry_potter_texto {
     margin-left: 5%;
     margin-right: 5%;
-    }
-  
-    .icons {
-      display: none;
-  }
-
-  .menu {
-      padding: 10px;
-      position: relative;
   }
 
   .icons {
     display: none;
-}
+  }
 
-.menu {
+  .menu {
     padding: 10px;
     position: relative;
-}
+  }
 
-.logo {
+  .icons {
+    display: none;
+  }
+
+  .menu {
+    padding: 10px;
+    position: relative;
+  }
+
+  .logo {
     flex-grow: 1;
     text-align: center;
-}
+  }
 
-.hamburger {
+  .hamburger {
     display: flex;
-}
+  }
 
-.menu_nav {
+  .menu_nav {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -309,40 +289,42 @@ body {
     background-color: var(--cor-grifinoria-2);
     padding: 10px;
     border-radius: 5px;
-    
-}
-.menu_nav a {
+  }
+
+  .menu_nav a {
     color: var();
     text-decoration: auto;
     align-items: center;
     padding: 10px;
     display: block;
-}
-a
-.menu_nav.active {
+  }
+
+  .menu_nav.active {
     display: flex;
     animation: slideIn 2s forwards;
-}
-.footer_icons{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  background-color: var(--cor-Lufalufa-1);
-}
-.footer_icons img {
-  width: 44px; 
-  height: 44px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-  
-}
+  }
 
-.footer_icons img:hover {
-  filter: hue-rotate(220deg) brightness(0.3);
-  transform: scale(1.1);
-}
-.footer_icons img:active {
-  filter: hue-rotate(220deg) brightness(0.3);
-  transform: scale(0.95);
-}
+  .footer_icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: var(--cor-Lufalufa-1);
+  }
+
+  .footer_icons img {
+    width: 44px;
+    height: 44px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+  .footer_icons img:hover {
+    filter: hue-rotate(220deg) brightness(0.3);
+    transform: scale(1.1);
+  }
+
+  .footer_icons img:active {
+    filter: hue-rotate(220deg) brightness(0.3);
+    transform: scale(0.95);
+  }
 }
