@@ -318,7 +318,7 @@ body {
     padding: 10px;
     display: block;
 }
-
+a
 .menu_nav.active {
     display: flex;
     animation: slideIn 2s forwards;
