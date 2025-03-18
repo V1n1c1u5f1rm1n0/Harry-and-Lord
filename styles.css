@@ -24,7 +24,6 @@
   --cor-corvinal-1: #1C466E;
   --cor-Lufalufa-1: #9E9E9E;
   --cor-magia-1: #62aef5;
-
 }
 
 body {
@@ -32,15 +31,76 @@ body {
   height: 100vh;
   background-color: var(--cor-de-fundo);
   color:var(--cor-de-fonte);   
+  
 }
-
-
 
 .menu {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid  #585858;
+  border-bottom: 1px solid var(--cor-Lufalufa-1);
   margin-top: 10px;
+  
+}
+
+/* Estilização do Menu Hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* Animação do "X" com 3s */
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: transform 2s ease-in-out;
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}/* Estilização do Menu Hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* Animação do "X" com 3s */
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: transform 2s ease-in-out;
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: transform 2s ease-in-out;
+}
+
+.menu_nav {
+  display: flex;
   
 }
 
@@ -51,7 +111,14 @@ body {
   padding-left: 24px;
   margin-bottom: 24px;
 }
-
+.icons img:hover {
+  filter: hue-rotate(220deg) brightness(0.3);
+  transform: scale(1.1);
+}
+.icons img:active {
+  filter: hue-rotate(220deg) brightness(0.3);
+  transform: scale(0.95);
+}
 .logo {
   font-family:'harryph';
   font-weight: 100;
@@ -62,11 +129,6 @@ body {
   margin-left: 4%;
 }
 
-.barra-de-pesquisa::placeholder {
-  text-align: right; 
-  padding-right: 15px;
-}
-
 .prc {
   display: flex; 
   width: 100%;
@@ -75,6 +137,7 @@ body {
   gap: 20px;
   font-family:'harryph';
   font-size: 1.75rem; /* 28px */
+  gap: 5%;
   
 }
   .harry_potter, .lord_voldemort {
@@ -134,25 +197,22 @@ body {
   margin-right: 10%;
   }
 
-
-
 .menu_nav {
   display: flex;
   align-items: center;
   
 }
-
 .menu_link {
   text-decoration: none;
   color: inherit; 
   font-size: 1rem; /* 16px */
   font-weight: bold;
-  margin-right: 57px;
+  margin-right: 35px;
   font-family: harryph;
   font-size: 1.75rem; /* 28px */
   font-weight: 100;
+  padding-right: -33px;
 }
-
 /* Hover de menu */
 #varinha:hover {
   color: var(--cor-grifinoria-1);
@@ -165,4 +225,124 @@ body {
 #magia:hover {
   color: var(--cor-magia-1);
 
+}
+.footer_icons {
+  display: none;
+}
+
+/* Animação do Menu */
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+}
+
+
+@media (max-width: 1270px) {
+  .menu{
+    align-items: center;
+  }
+  .prc {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .lord_voldemort {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: -5%;
+  }
+  .harry_potter_texto {
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+  
+    .icons {
+      display: none;
+  }
+
+  .menu {
+      padding: 10px;
+      position: relative;
+  }
+
+  .icons {
+    display: none;
+}
+
+.menu {
+    padding: 10px;
+    position: relative;
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.hamburger {
+    display: flex;
+}
+
+.menu_nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    background-color: var(--cor-grifinoria-2);
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.menu_nav a {
+    color: var();
+    text-decoration: auto;
+    align-items: center;
+    padding: 10px;
+    display: block;
+}
+
+.menu_nav.active {
+    display: flex;
+    animation: slideIn 2s forwards;
+}
+.footer_icons{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  background-color: var(--cor-Lufalufa-1);
+}
+.footer_icons img {
+  width: 44px; 
+  height: 44px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  
+}
+
+.footer_icons img:hover {
+  filter: hue-rotate(220deg) brightness(0.3);
+  transform: scale(1.1);
+}
+.footer_icons img:active {
+  filter: hue-rotate(220deg) brightness(0.3);
+  transform: scale(0.95);
+}
 }
