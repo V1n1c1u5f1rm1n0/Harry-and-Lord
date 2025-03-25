@@ -1,5 +1,4 @@
 /* reset css */
-
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,17 @@
 /*fontes importadas*/
 @font-face {
   font-family: 'harryph';
-  src: url("./fontes/HARRYP__.TTF");
+  src: url('./fontes/HARRYP__.TTF');
+}
+
+@font-face {
+  font-family: 'parselto';
+  src: url('./fontes/PARSELTO.TTF');
+}
+
+@font-face {
+  font-family: 'aquiline';
+  src: url('./fontes/AquilineTwo.ttf');
 }
 
 /*cores project*/
@@ -22,6 +31,11 @@
   --cor-corvinal-1: #1C466E;
   --cor-Lufalufa-1: #9E9E9E;
   --cor-magia-1: #62aef5;
+
+  /* corres de cardes */
+  --cor-fundo-card: #3b3e37;
+  --cor-borda-card: #e19563;
+  --cor-titulo-card: #c4594e;
 }
 
 body {
@@ -50,7 +64,7 @@ body {
 .hamburger div {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: var(--cor-de-fonte);
   transition: 0.4s;
 }
 
@@ -97,9 +111,14 @@ body {
   font-weight: 100;
   font-size: 3.75rem; /* 60px */
   text-align: center;
-  flex-grow: 1;
+  display: inline-flex;
+  gap: 10px;
   margin-top: 10px;
-  margin-left: 4%;
+  margin-left: 20%;
+  text-decoration: none;
+  color: var(--cor-de-fonte);
+  white-space: nowrap;
+  align-items: center;
 }
 
 .prc {
@@ -107,7 +126,7 @@ body {
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
+  gap: 0px;
   font-family: 'harryph';
   font-size: 1.75rem; /* 28px */
   gap: 5%;
@@ -200,12 +219,20 @@ body {
   color: var(--cor-sonserina-2);
 }
 
-#magia:hover {
+#filmes:hover {
   color: var(--cor-magia-1);
 }
 
 .footer_icons {
   display: none;
+}
+
+#livros {
+  display: none;
+}
+
+#livros:hover {
+  color: var(--cor-sonserina-1);
 }
 
 /* Animação do Menu */
@@ -231,55 +258,177 @@ body {
   }
 }
 
+/* feitiços format */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.eu_juro {
+  margin-left: 15%;
+  font-family: 'aquiline';
+  font-size: 2.1875rem; /* 35px */
+  font-weight: 30;
+  color: var(--cor-sonserina-1);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 20s steps(1000, end) forwards;
+  text-align: center;
+  
+}
+.pesquisa{
+  text-align: start;
+  margin-right: 1%;
+}
+.conjure{ 
+  margin-bottom: 8px;
+  font-family: 'parselto';
+  font-size: 20px;
+  font-weight: 50;
+  animation: fadeIn 45s ease-in-out forwards;
+}
+#search {
+  flex-direction: end;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 8px;
+  width: 220px;
+  font-size: 16px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.959);
+  animation: fadeIn 85s ease-in-out forwards;
+  border: none;
+  border-bottom: 2px solid var(--cor-sonserina-1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 3;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  animation: bounce-in-top 10s ease-in-out forwards;
+}
+
+@keyframes bounce-in-top {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 212px;
+  padding: 15px;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: transform 1s ease-in-out; /* Ajustado para 1 segundo */
+  cursor: pointer;
+  border: 1px solid var(--cor-Lufalufa-1);
+}
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+.card h3 {
+  font-size: 22px;
+  font-family: 'parselto';
+  font-weight: 700;
+  color: var(--cor-de-fonte);
+  margin-bottom: 8px;
+  text-align: center;
+  text-shadow: 2px 2px 5px var(--cor-de-fundo), -1px -1px 5px var(--cor-de-fundo);
+}
+
+.card p {
+  font-size: 17px;
+  font-family: 'parselto';
+  color: var(--cor-de-fonte);
+  text-align: center;
+  text-shadow: 2px 2px 5px var(--cor-de-fundo), -1px -1px 5px var(--cor-de-fundo);
+}
+
+.card .description {
+  font-size: 12px;
+  color: var(--cor-grifinoria-1);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 @media (max-width: 1270px) {
   .menu {
     align-items: center;
   }
-
+  
   .prc {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-
+  
   .lord_voldemort {
     text-align: left;
     margin-left: 5%;
     margin-right: -5%;
   }
-
+  
   .harry_potter_texto {
     margin-left: 5%;
     margin-right: 5%;
   }
-
+  
   .icons {
     display: none;
   }
-
+  
   .menu {
     padding: 10px;
     position: relative;
   }
-
+  
   .icons {
     display: none;
   }
-
+  
   .menu {
     padding: 10px;
     position: relative;
   }
-
+  
   .logo {
-    flex-grow: 1;
-    text-align: center;
+    align-items: center;
+    margin-left: 10%;
+    margin: 8px 8px;
   }
-
+  
   .hamburger {
     display: flex;
   }
-
+  
   .menu_nav {
     display: none;
     flex-direction: column;
@@ -290,7 +439,7 @@ body {
     padding: 10px;
     border-radius: 5px;
   }
-
+  
   .menu_nav a {
     color: var();
     text-decoration: auto;
@@ -298,33 +447,82 @@ body {
     padding: 10px;
     display: block;
   }
-
+  
   .menu_nav.active {
     display: flex;
     animation: slideIn 2s forwards;
   }
-
+  
   .footer_icons {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
     background-color: var(--cor-Lufalufa-1);
   }
-
+  
   .footer_icons img {
     width: 44px;
     height: 44px;
     margin-top: 14px;
     margin-bottom: 14px;
   }
-
+  
   .footer_icons img:hover {
     filter: hue-rotate(220deg) brightness(0.3);
     transform: scale(1.1);
   }
-
+  
   .footer_icons img:active {
     filter: hue-rotate(220deg) brightness(0.3);
     transform: scale(0.95);
+  }
+  #search {
+    animation: fadeIn 40s ease-in-out forwards;
+  }
+  .eu_juro {
+    animation: typing 10s steps(1000, end) forwards;
+    
+  }
+
+}
+
+@media (max-width: 890px) {
+  .eu_juro {
+    font-size: 1.5rem; 
+    animation: typing 5s steps(800, end) forwards;
+    margin: 0px;
+  }
+  #search {
+    margin: 8px;
+    animation: fadeIn 3s ease-in-out forwards;
+  }
+  .search-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .conjure{
+    display: none;
+  }
+}
+
+@media (max-width: 530px) {
+  .eu_juro {
+    font-size: 1.25rem; /* Further adjust font size for very small screens */
+    animation: typing 5s steps(600, end) forwards; /* Further adjust animation duration */
+  }
+  #search {
+    width: 170px;
+    margin: 8px;
+    animation: fadeIn 3s ease-in-out forwards;
+  }
+
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }

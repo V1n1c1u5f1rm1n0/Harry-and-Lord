@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Lord</title>
+   
+   <!-- links de Css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <header class="menu">
+    <div class="icons">
+      <a href='https://github.com/V1n1c1u5f1rm1n0' target="_blank"><img src="./img/github_icon.png" alt="logo GitHub"></a>
+      <a href='https://www.linkedin.com/in/vinicius-firmino/' target="_blank"><img src="./img/linkding_icon.png" alt="logo Linkedin"></a>
+      <a href='https://discord.gg/HqS6YYK2QP' target="_blank"><img src="./img/discord_icon.png" alt="logo Discord"></a>
+    </div>
+    <h1><a href="index.html" class="logo">Harry Lord</a></h1>
+   
+     <!-- Menu Hambúrguer -->
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="menu_nav">
+      <a href="./varinhas.html" id="varinha" class="menu_link">Varinhas</a>
+        <a href="./feitico.html" id="feitico" class="menu_link">Feitiços</a>
+        <a href="#Lord" id="filmes" class="menu_link">Filmes</a>
+    </nav>
+  </header>
+
+  <div class="search-container">
+    <h3 class="eu_juro">Eu juro solenemente não fazer nada de bom</h3>
+   
+    <div class="pesquisa">
+        <h3 class="conjure">Conjure</h3>
+        <input type="text" id="search" placeholder="Procurar um feitiço" oninput="searchSpell()">
+    </div>
+  </div>
+
+  
+  <div class="cards-container" id="cards-container"></div>
+
+  <footer>
+    <div class="footer_icons">
+      <a href='https://github.com/V1n1c1u5f1rm1n0' target="_blank"><img src="./img/github_icon.png" alt="logo GitHub"></a>
+      <a href='https://www.linkedin.com/in/vinicius-firmino/' target="_blank"><img src="./img/linkding_icon.png" alt="logo Linkedin"></a>
+      <a href='https://discord.gg/HqS6YYK2QP' target="_blank"><img src="./img/discord_icon.png" alt="logo Discord"></a>
+
+    </div>
+  </footer>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
