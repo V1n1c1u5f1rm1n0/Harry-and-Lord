@@ -1,0 +1,145 @@
+@import url(styles.css);
+
+
+
+.varinhas_menu {
+    display: flex;
+    padding: 1%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    gap: 1%;
+}
+
+.revelio_menu {
+    font-family: 'aquiline';
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 40%;
+    
+}
+/* Varinhas imagens ajuste */
+.revelio_menu img {
+    width: 47px;
+    max-width: 40px;
+    height: auto;
+    margin-left: 30px;
+    transform: rotate(0deg);
+}
+
+.img_varinha_lord,
+.img_varinha_bella,
+.img_varinha_ron,
+.img_varinha_des_1,
+.img_varinha_des_2,
+.img_varinha_das_varinhas {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    transform: rotate(var(--rotation-angle));
+}
+
+.img_varinha_lord {
+    --rotation-angle: -53deg;
+}
+
+.img_varinha_bella {
+    --rotation-angle: -48deg;
+}
+
+.img_varinha_ron {
+    --rotation-angle: 222deg;
+}
+
+.img_varinha_des_1 {
+    --rotation-angle: 224deg;
+}
+
+.img_varinha_des_2 {
+    --rotation-angle: 224deg;
+}
+
+.img_varinha_das_varinhas {
+    --rotation-angle: 134deg;
+
+}
+
+/* estilização container varinhas  */
+
+.varinha_lord {
+    background-color:var(--cor-grifinoria-2);
+    margin-top: 2%;
+    height: 90vh;
+    padding-top: 5%;
+    width: 20%;
+}
+
+.varinha_bellatrix {
+    background-color:var(--cor-grifinoria-1);
+    margin-top: 2%;
+    height: 90vh;
+    padding-top: 5%;
+    width: 20%;
+}
+
+.img_varinha_bella{
+    margin-top: -15%;
+}
+
+.varinha_ron {
+    background-color:var( --cor-sonserina-2);
+    margin-top: 2%;
+    height: 90vh;
+    padding-top: 5%;
+    width: 20%;
+}
+
+.varinha_de_desconhecido_1 {
+    background-color:var(--cor-sonserina-1);
+    margin-top: 2%;
+    height: 90vh;
+    padding-top: 5%;
+    width: 20%;
+}
+
+.varinha_de_desconhecido_2 {
+    background-color:var(--cor-corvinal-1);
+    margin-top: 2%;
+    height: 90vh;
+    padding-top: 5%;
+    width: 20%;
+}
+
+.varinha_das_varinhas {
+    background-color:var(--cor-Lufalufa-1);
+    margin-top: 2%;
+    height: 90vh;
+    padding-top: 5%;
+    width: 20%;
+}
+
+/* ajustando reliquias */
+
+.reliquias {
+    margin-top: 50%;
+    animation: rotacao 50s linear infinite;
+}
+
+#lord_reliquia {
+    margin-top: 75%;
+}
+
+#bela_reliquia {
+    margin-top: 65%;
+}
+@keyframes rotacao {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
